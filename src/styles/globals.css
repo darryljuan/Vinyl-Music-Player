@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #100b09;
+  color: #f2ead9;
+}
+
+/* Concentric vinyl grooves without loading an image */
+.vinyl-grooves {
+  background-image: repeating-radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.045) 0px,
+    rgba(255, 255, 255, 0.045) 1px,
+    transparent 1.5px,
+    transparent 4px
+  );
+}
+
+.vinyl-sheen {
+  background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.08) 50%, transparent 60%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vinyl-spin {
+    animation: none !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #33241c;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
